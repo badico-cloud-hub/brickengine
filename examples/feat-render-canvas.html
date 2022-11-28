@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body >
+    <div id="myCanvas">
+
+    </div>
+    </canvas>
+</body>
+<script type="module">
+import brickengine from '../src/index.js';
+const {
+    renders
+} = brickengine;
+const canvasRender = renders.canvas({
+    weight: 40,
+    lines: 10,
+    columns: 10,
+})// factory
+console.log(canvasRender)
+canvasRender.mount("myCanvas")// id
+canvasRender.writePixel(0, 2)
+canvasRender.writePixel(0, 1)
+canvasRender.writePixel(0, 0)
+setTimeout(() => canvasRender.erasePixel(0, 0)
+, 3000)
+
+</script>
+</html>
